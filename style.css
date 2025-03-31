@@ -1,6 +1,10 @@
 body {
   background-color: black;
 }
+.fail {
+  color: red;
+  font-weight: bold;
+}
 h1 {
   color: white;
   font-family: cursive;
@@ -8,6 +12,14 @@ h1 {
 p {
   color: white;
   font-style: italic;
+  font-weight: bold;
+}
+.pass {
+  color: green;
+  font-weight: bold;
+}
+.recheck{
+  color: yellow;
   font-weight: bold;
 }
 button, select {
