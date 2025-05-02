@@ -1,4 +1,5 @@
 function calculateMax() {
+  document.getElementById('results').innerHTML = '';
   const limits = [0.060,0.060,0.050,0.051];
   let Passed = 0;
   let Pass_Value = [];
