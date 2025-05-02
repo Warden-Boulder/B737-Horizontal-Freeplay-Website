@@ -34,7 +34,7 @@ function calculateMax() {
   }
   if (Y > limits[1]) {
     Failed = Failed + 1
-    Fail_Value.push("Y = "+Y)
+    Fail_Value.push("Y = "+Y.toFixed(4))
   } else if (Y === 0) {
     Zero_Counter = Zero_Counter + 1
     Zero.push("Y")
@@ -53,7 +53,7 @@ function calculateMax() {
     Pass_Value.push("Z = "+Z.toFixed(4))
   }
   if (H > limits[3]) {
-    Fail = Fail + 1
+    Failed = Failed + 1
     Fail_Value.push("H = "+H.toFixed(4))
   } else {
     Passed = Passed + 1
