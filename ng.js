@@ -1,4 +1,5 @@
 function calculateNG() {
+  document.getElementById('results').innerHTML = '';
   const limits = [0.066, 0.066, 0.056, 0.078];
   Pass = [];
   Fail = [];
