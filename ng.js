@@ -10,21 +10,21 @@ function calculateNG() {
   let H = (1.25 * D3) + ((D1 + D2) / 2);
 
   if (D1 > limits[0]) {
-    Fail.push("D1");
+    Fail.push("D1 = " + D1.toFixed(4));
   } else {
-    Pass.push("D1");
+    Pass.push("D1 = " + D1.toFixed(4));
   }
 
   if (D2 > limits[1]) {
-    Fail.push("D2");
+    Fail.push("D2 = " + D2.toFixed(4));
   } else {
-    Pass.push("D2");
+    Pass.push("D2 = " + D2.toFixed(4));
   }
 
   if (D3 > limits[2]) {
-    Fail.push("D3");
+    Fail.push("D3 = " + D3.toFixed(4));
   } else {
-    Pass.push("D3");
+    Pass.push("D3 = " + D3.toFixed(4));
   }
 
   if (H > limits[3]) {
