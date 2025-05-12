@@ -28,9 +28,9 @@ function calculateNG() {
   }
 
   if (H > limits[3]) {
-    Fail.push("H");
+    Fail.push("H = " + H.toFixed(4));
   } else {
-    Pass.push("H");
+    Pass.push("H = " + H.toFixed(4));
   }
 
   let resultsHTML = "<h3>Results:</h3><br>";
