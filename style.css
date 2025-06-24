@@ -5,9 +5,17 @@ body {
   color: red;
   font-weight: bold;
 }
+footer {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  border-top: 1px solid white;
+}
 h1 {
   color: white;
-  font-family: cursive;
+  font-style: italic
 }
 p {
   color: white;
