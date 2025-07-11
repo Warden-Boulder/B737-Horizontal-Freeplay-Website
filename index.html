@@ -5,23 +5,26 @@
   <script src="max.js"></script>
   <script src="ng.js"></script>
   <script src="toggle.js"></script>
-</header
+</head>
 <body>
-  <h1>B737 Aircraft Type:</h1>
-  <select name="Aircraft Type" id="aircraftType" onchange="toggleButtons()">
+  <header>
+    <h1>B737 Horizontal Freeplay Check</h1>
+  </header>
+  <h2>B737 Aircraft Type: <select name="Aircraft Type" id="aircraftType" onchange="toggleButtons()">
     <option value="null">---Select--</option>
     <option value="NG">B737NG</option>
     <option value="Max">B737Max</option>
-  </select><br>
+  </select></h2><br>
   <p>D1 = <input type="number" id="D1"></input></p>
   <p>D2 = <input type="number" id="D2"></input></p>
   <p>D3 = <input type="number" id="D3"></input></p>
-  <p>Weight (in lbs) = <input type="number" id="Weight" placeholder="B737 Max A/C Only"</input></p><br>
+  <p>Weight (in lbs)= <input type="number" id="Weight" placeholder="B737 Max A/C Only"</input></p><br>
   <button onclick="calculateNG()"> Calculate NG Freeplay</button><br>
   <button onclick="calculateMax()"> Calculate Max Freeplay</button>
   <div id="results"></div>
-  <footer>
-    Developed by Warden Boulder
-  </footer>
+<footer>
+  Developed by Warden Boulder<br>
+  <a href="https://linktr.ee/no13boulder">Linktree</a>
+</footer>
 </body>
 </html>
