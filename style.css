@@ -19,7 +19,7 @@ header {
   text-align: center;
   font-style: italic;
 }
-h2 ,h3 {
+h2 , h3 {
   color: #e0e0e0;
   font-style: italic;
 }
@@ -44,4 +44,8 @@ button, select {
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+select {
+  margin-bottom: 25px;
+  margin-top: -10px;
 }
