@@ -37,7 +37,7 @@ function calculateNG() {
 
   if (msn !== "") {
     let name = msn;
-    let resultsHTML = "<h3 class='underline'>Freeplay Results for " + name + "</h3><br>";
+    let resultsHTML = "<h3 class='results underline'>Freeplay Results for " + name + "</h3><br>";
     resultsHTML += "<p class = 'pass'>Total Passed: " + Pass.length + "</p><br>";
     for (let i = 0; i < Pass.length; i++) {
       resultsHTML += "<p class = 'pass'>" + Pass[i] + "</p><br>";
@@ -48,7 +48,7 @@ function calculateNG() {
     }
     document.getElementById('results').innerHTML = resultsHTML;
   } else {
-    let resultsHTML2 = "<h3 class='underline'>Freeplay Results</h3><br>";
+    let resultsHTML2 = "<h3 class='results underline'>Freeplay Results</h3><br>";
     resultsHTML2 += "<p class = 'pass'>Total Passed: " + Pass.length + "</p><br>";
     for (let i = 0; i < Pass.length; i++) {
       resultsHTML2 += "<p class = 'pass'>" + Pass[i] + "</p><br>";
