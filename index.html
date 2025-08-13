@@ -2,29 +2,30 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
-  <script src="language.js"></script>
   <script src="max.js"></script>
+  <script src="misc.js"></script>
   <script src="ng.js"></script>
   <script src="toggle.js"></script>
 </head>
 <header>
-  <h1 >B737 Horizontal Freeplay Checker</h1>
-</header>
+  <h1>Boulder's Maintenance Workshop</h1>
+  <p>A collection of custom tools for aircraft maintenance. Other tools are in work.</p>
+</header><br>
 <body>
-  <!--<h2 class="underline">Hangar 1</h2>-->
-  <p>B737 Aircraft Type:</p>
+  <h2 class="underline">B737 Horizontal Freeplay Calculator</h2>
+  <p>Aircraft Type:</p>
   <select name="Aircraft Type" id="aircraftType" onchange="toggleButtons()">
     <option value="null">---Select--</option>
     <option value="NG">B737NG</option>
     <option value="Max">B737Max</option>
   </select><br>
-  <p>Tail # or MSN (optional): <input type="text"  id="msn" placeholder="Tail # or MSN"></p>
-  <p>D1 = <input type="number" id="D1" min="0" step="0.01" placeholder="Enter D1 value/reading" /></p>
-  <p>D2 = <input type="number" id="D2"  min="0" step="0.01" placeholder="Enter D2 value/reading"></p>
-  <p>D3 = <input type="number" id="D3" min="0" step="0.01"  min="0" step="1"  placeholder="Enter D3 value/reading" /></p>
-  <p>Weight (in lbs) = <input type="number" id="Weight" placeholder="Enter weight used" /></p><br>
+  <p id="tail">Tail # / MSN (optional): <input type="text"  id="msn" placeholder="Tail # or MSN"></p>
+  <p id="d1">D1 = <input type="number" id="D1" min="0" step="0.01" placeholder="Enter D1 value/reading" /></p>
+  <p id="d2">D2 = <input type="number" id="D2"  min="0" step="0.01" placeholder="Enter D2 value/reading"></p>
+  <p id="d3">D3 = <input type="number" id="D3" min="0" step="0.01"  min="0" step="1"  placeholder="Enter D3 value/reading" /></p>
+  <p id="weight">Weight (in lbs) = <input type="number" id="Weight" placeholder="Enter weight used" /></p><br>
   <button onclick="calculateNG()"> Calculate NG Freeplay</button>
-  <button onclick="calculateMax()"> Calculate Max Freeplay</button>
+  <button onclick="calculateMax()"> Calculate Max Freeplay</button><br>
   <div id="results"></div>
   <footer>
     Developed by Warden Boulder<br>
