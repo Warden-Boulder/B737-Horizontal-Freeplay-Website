@@ -3,9 +3,7 @@
 <head>
   <link rel="stylesheet" href="style.css">
   <script src="language.js"></script>
-  <script src="max.js"></script>
-  <script src="misc.js"></script>
-  <script src="ng.js"></script>
+  <script src="737.js"></script>
   <script src="toggle.js"></script>
 </head>
 <header>
@@ -15,7 +13,7 @@
 <body>
  <details>
    <summary><h2 class="underline">B737 Horizontal Freeplay Check</h2></summary>
-  <p>B737 Type:</p>
+  <p>Is a ng or max being worked?</p>
   <select name="Aircraft Type" id="aircraftType" onchange="toggleButtons()">
     <option value="null">---Select--</option>
     <option value="NG">B737NG</option>
@@ -31,7 +29,13 @@
   <div id="results"></div>
  </details>
   <details>
-    <summary><h2 class="underline">B757 Tail Freeplay Checks (work in prgroess)</h2></summary>
+    <summary><h2 class="underline">B757 Tail Freeplay Check (work in progress)</h2></summary>
+    <p>Which tail freeplay is being performed?</p>
+  <select name="Tail Freeplay" id="tailFreeplay" onchange="toggleTail()">
+    <option value="null">---Select--</option>
+    <option value="elevator">Elevator</option>
+    <option value="rudder">Rudder</option>
+  </select><br>
     <p id="tail">Tail # / MSN (optional): <input type="text" id="msn" placeholder="Tail # or MSN"></p>
   </details>
   <footer>
