@@ -1,4 +1,4 @@
-function toggleButtons() {
+function toggle737() {
   const aircraftType = document.getElementById("aircraftType").value;
   const ngButton = document.querySelector('button[onclick="calculateNG()"]');
   const maxButton = document.querySelector('button[onclick="calculateMax()"]');
