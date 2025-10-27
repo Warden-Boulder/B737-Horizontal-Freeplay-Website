@@ -62,3 +62,8 @@ select {
 .results {
   margin-bottom: -10px;
 }
+.ref {
+  color: red;
+  font-style: italic;
+  font-weight: bold;
+}
