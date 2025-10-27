@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="language.js"></script>
   <script src="737.js"></script>
+  <script src="757.js"></script>
   <script src="toggle.js"></script>
 </head>
 <header>
@@ -13,7 +14,8 @@
 <body>
  <details>
    <summary><h2 class="underline">B737 Horizontal Freeplay Check</h2></summary>
-  <p>Is a ng or max being worked?</p>
+   <p class="ref">Ref: Any applicable AD/SB</p>
+   <p>Is a ng or max being worked?</p>
   <select name="Aircraft Type" id="aircraftType" onchange="toggle737()">
     <option value="null">---Select--</option>
     <option value="NG">B737NG</option>
@@ -29,21 +31,28 @@
   <div id="results"></div>
  </details>
   <details>
-    <summary><h2 class="underline">B757 Rudder Freeplay Check (work in progress)</h2></summary>
-    <p id="tail">Tail # / MSN (optional): <input type="text" id="msn" placeholder="Tail # or MSN"></p>
-    <p id="1L">1st Reading (pushing right): <input type="number" id="1l" min="0" step="0.001" placeholder="Enter 1st reading"/></p>
-    <p id="1R">1st Reading (pushing left): <input type="number" id="1r" min="0" step="0.001" placeholder="Enter 1st reading"/></p>
-    <p id="2L">2nd Reading (pushing right): <input type="number" id="2l" min="0" step="0.001" placeholder="Enter 2nd reading"/></p>
-    <p id="2R">2nd Reading (pushing left): <input type="number" id="2r" min="0" step="0.001" placeholder="Enter 2nd reading"/></p>
-    <button onclick="calculateRudder()">Calulate</button>
-    <div id="results 2"></div>
+    <summary><h2 class="underline">B757 Rudder Freeplay Check</h2></summary>
+    <p class="ref">Ref: B757 AMM 27-02-00-736-025 and any applicable AD/SB</p>
+    <p>Active PCA/PCU (Active System)</p>
+    <select>
+    <option>---Select--</option>
+    <option>Bottom PCA/PCU (Center System)</option>
+    <option>Middle PCA/PCU (Left System)</option>
+    <option>Top PCA/PCU (Right System)</option>
+  </select><br>
+    <p>Tail # / MSN (optional): <input type="text" id="tail757" placeholder="Tail # or MSN"></p>
+    <p>1st Reading (pushing right): <input type="number" id="1l" min="0" step="0.001" placeholder="Enter 1st reading"/></p>
+    <p>1st Reading (pushing left): <input type="number" id="1r" min="0" step="0.001" placeholder="Enter 1st reading"/></p>
+    <p>2nd Reading (pushing right): <input type="number" id="2l" min="0" step="0.001" placeholder="Enter 2nd reading"/></p>
+    <p>2nd Reading (pushing left): <input type="number" id="2r" min="0" step="0.001" placeholder="Enter 2nd reading"/></p>
+    <button onclick="calculateRudder()">Calculate</button>
+    <div id="results757"></div>
   </details>
   <footer>
     Developed by Warden Boulder<br>
     <a href="https://linktr.ee/wardenboulder">Linktree</a><br>
     Version 2.1 (update in progress)<br>
     Planned Updates:<br>
-      1. B757 Rudder Freeplay<br>
       2. Language Support - French, Japanese, and Spanish
     </ol>
   </footer>
