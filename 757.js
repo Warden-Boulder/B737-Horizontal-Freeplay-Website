@@ -10,34 +10,45 @@ function calculateRudder() {
   let fail = [];
   let limits = [0.040, 0.40];
 
+  let left_diff = (oneL-twoL).toFixed(3);
+  let right_diff = (oneR-twoR).toFixed(3);
   let first_total = oneL+oneR;
   let second_total = twoL+twoR;
-  let diff = first_total-second_total;
 
-   if (diff < 0) {
-    diff = diff*(-1);
+  if (left_diff < 0) {
+    left_diff = left_diff*(-1);
   } else {
-     diff = diff;
+    left_diff = left_diff;
   }
 
+  if (right_diff < 0) {
+    right_diff = right_diff*(-1);
+  } else {
+    right_diff = right_diff;
+  }
+
+  if (left_diff < limits[0]) {
+    pass.push("Left differential is "+left_diff);
+  } else {
+    fail.push("Left differential is "+left_diff);
+  }
+  if (right_diff < limits[0]) {
+    pass.push("Right differential is "+right_diff);
+  } else {
+    fail.push("Right differential is "+right_diff);
+  }
   if (first_total < limits[1]) {
     pass.push("1st total = "+first_total);
   } else {
     fail.push("1st total = "+first_total);
   }
 
-   if (second_total < limits[1]) {
+  if (second_total < limits[1]) {
     pass.push("2nd total = "+second_total);
   } else {
     fail.push("2nd total = "+second_total);
   }
-
-   if (diff < limits[0]) {
-    pass.push("Difference = "+diff.toFixed(3));
-  } else {
-    fail.push("Difference = "+diff.toFixed(3));
-  }
-
+  
   if (tail !== "") {
     let name = tail;
     let resultsHTML = "<h3 class='results underline'>Freeplay Results for " + name + "</h3><br>";
