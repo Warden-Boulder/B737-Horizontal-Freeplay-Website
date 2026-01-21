@@ -51,26 +51,36 @@ function calculateRudder() {
   
   if (tail !== "") {
     let name = tail;
-    let resultsHTML = "<h3 class='results underline'>Freeplay Results for " + name + "</h3><br>";
-    resultsHTML += "<p class = 'pass'>Total Passed: " + pass.length + "</p><br>";
+    let resultsHTML = "<h3 class='results underline'>Freeplay Results for " + name + "</h3>";
+    resultsHTML += "<div class='results-container'>";
+    resultsHTML += "<div class='results-column'>";
+    resultsHTML += "<p class='pass'>Total Passed: " + pass.length + "</p>";
     for (let i = 0; i < pass.length; i++) {
-      resultsHTML += "<p class = 'pass'>" + pass[i] + "</p><br>";
+      resultsHTML += "<p class='pass'>" + pass[i] + "</p>";
     }
-    resultsHTML += "<p class = 'fail'>Total Failed: " + fail.length + "</p><br>";
+    resultsHTML += "</div>";
+    resultsHTML += "<div class='results-column'>";
+    resultsHTML += "<p class='fail'>Total Failed: " + fail.length + "</p>";
     for (let i = 0; i < fail.length; i++) {
-      resultsHTML += "<p class = 'fail'>" + fail[i] + "</p><br>";
+      resultsHTML += "<p class='fail'>" + fail[i] + "</p>";
     }
+    resultsHTML += "</div></div>";
     document.getElementById('results757').innerHTML = resultsHTML;
   } else {
-    let resultsHTML2 = "<h3 class='results underline'>Freeplay Results</h3><br>";
-    resultsHTML2 += "<p class = 'pass'>Total Passed: " + pass.length + "</p><br>";
+    let resultsHTML2 = "<h3 class='results underline'>Freeplay Results</h3>";
+    resultsHTML2 += "<div class='results-container'>";
+    resultsHTML2 += "<div class='results-column'>";
+    resultsHTML2 += "<p class='pass'>Total Passed: " + pass.length + "</p>";
     for (let i = 0; i < pass.length; i++) {
-      resultsHTML2 += "<p class = 'pass'>" + pass[i] + "</p><br>";
+      resultsHTML2 += "<p class='pass'>" + pass[i] + "</p>";
     }
-    resultsHTML2 += "<p class = 'fail'>Total Failed: " + fail.length + "</p><br>";
+    resultsHTML2 += "</div>";
+    resultsHTML2 += "<div class='results-column'>";
+    resultsHTML2 += "<p class='fail'>Total Failed: " + fail.length + "</p>";
     for (let i = 0; i < fail.length; i++) {
-      resultsHTML2 += "<p class = 'fail'>" + fail[i] + "</p><br>";
+      resultsHTML2 += "<p class='fail'>" + fail[i] + "</p>";
     }
+    resultsHTML2 += "</div></div>";
     document.getElementById('results757').innerHTML = resultsHTML2;
   }
 }
