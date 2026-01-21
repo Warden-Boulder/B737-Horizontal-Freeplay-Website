@@ -26,7 +26,7 @@ function convertTorque() {
     inchPounds = inputValue / 0.113;
     resultsHTML = "<h4 class='results underline'>Results</h4><br>";
     resultsHTML += "<p>"+footPounds.toFixed(2)+" foot pounds</p>";
-    resultsHTML += "<p>"+newtonMeters.toFixed(2)+" inch pounds</p>";
+    resultsHTML += "<p>"+inchPounds.toFixed(2)+" inch pounds</p>";
     document.getElementById('torqueResults').innerHTML = resultsHTML;
   }
 }
