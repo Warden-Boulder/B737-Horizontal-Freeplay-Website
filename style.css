@@ -23,6 +23,12 @@ header {
   text-align: center;
   font-style: italic;
 }
+h2 {
+  margin-bottom: -25px;
+}
+h3 {
+  margin-top: 25px;
+}
 h2 , h3 {
   color: #e0e0e0;
   font-style: italic;
@@ -59,7 +65,8 @@ select {
 .underline {
   text-decoration: underline;
 }
-.results {
+.results, #results {
+  color: gold;
   margin-bottom: -10px;
 }
 .ref {
