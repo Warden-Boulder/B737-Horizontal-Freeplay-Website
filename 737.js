@@ -143,8 +143,6 @@ function calculateFreeplay() {
     let Pass_Value = [];
     let Failed = 0;
     let Fail_Value = [];
-    let Zero_Counter = 0;
-    let Zero = [];
 
     let msn = document.getElementById('msn').value;
     let D1 = parseFloat(document.getElementById('D1').value);
@@ -166,7 +164,7 @@ function calculateFreeplay() {
       let x = X.toFixed(4);
       if (x.endsWith('00')) {
         Failed += 1;
-        Fail_Value.push("X = "+X.toFixed(2));
+        Fail_Value.push("X = "+X.toFixed(0));
       } else if (x.endsWith('0')) {
         Failed += 1;
         Fail_Value.push("X = "+X.toFixed(3));
@@ -180,7 +178,7 @@ function calculateFreeplay() {
       let x = X.toFixed(4);
       if (x.endsWith('00')) {
         Passed += 1;
-        Pass_Value.push("X = "+X.toFixed(2));
+        Pass_Value.push("X = "+X.toFixed(0));
       } else if (x.endsWith('0')) {
         Passed += 1;
         Pass_Value.push("X = "+X.toFixed(3));
@@ -190,16 +188,11 @@ function calculateFreeplay() {
       }
     }
 
-    if (X === 0) {
-      Zero_Counter += 1;
-      Zero.push("X");
-    }
-
     if (Y > limits[1]) {
       let y = Y.toFixed(4);
       if (y.endsWith('00')) {
         Failed += 1;
-        Fail_Value.push("Y = "+Y.toFixed(2));
+        Fail_Value.push("Y = "+Y.toFixed(0));
       } else if (y.endsWith('0')) {
         Failed += 1;
         Fail_Value.push("Y = "+Y.toFixed(3));
@@ -213,7 +206,7 @@ function calculateFreeplay() {
       let y = Y.toFixed(4);
       if (y.endsWith('00')) {
         Passed += 1;
-        Pass_Value.push("Y = "+Y.toFixed(2));
+        Pass_Value.push("Y = "+Y.toFixed(0));
       } else if (y.endsWith('0')) {
         Passed += 1;
         Pass_Value.push("Y = "+Y.toFixed(3));
@@ -223,16 +216,11 @@ function calculateFreeplay() {
       }
     }
 
-    if (Y === 0) {
-      Zero_Counter += 1;
-      Zero.push("Y");
-    }
-
     if (Z > limits[2]) {
       let z = Z.toFixed(4);
       if (z.endsWith('00')) {
         Failed += 1;
-        Fail_Value.push("Z = "+Z.toFixed(2));
+        Fail_Value.push("Z = "+Z.toFixed(0));
       } else if (z.endsWith('0')) {
         Failed += 1;
         Fail_Value.push("Z = "+Z.toFixed(3));
@@ -246,7 +234,7 @@ function calculateFreeplay() {
       let z = Z.toFixed(4);
       if (z.endsWith('00')) {
         Passed += 1;
-        Pass_Value.push("Z = "+Z.toFixed(2));
+        Pass_Value.push("Z = "+Z.toFixed(0));
       } else if (z.endsWith('0')) {
         Passed += 1;
         Pass_Value.push("Z = "+Z.toFixed(3));
@@ -256,16 +244,11 @@ function calculateFreeplay() {
       }
     }
 
-    if (Z === 0) {
-      Zero_Counter += 1;
-      Zero.push("Z");
-    }
-
     if (H > limits[3]) {
       let h = H.toFixed(4);
       if (h.endsWith('00')) {
         Failed += 1;
-        Fail_Value.push("H = "+H.toFixed(2));
+        Fail_Value.push("H = "+H.toFixed(0));
       } else if (h.endsWith('0')) {
         Failed += 1;
         Fail_Value.push("H = "+H.toFixed(3));
@@ -279,7 +262,7 @@ function calculateFreeplay() {
       let h = H.toFixed(4);
       if (h.endsWith('00')) {
         Passed += 1;
-        Pass_Value.push("H = "+H.toFixed(2));
+        Pass_Value.push("H = "+H.toFixed(0));
       } else if (h.endsWith('0')) {
         Passed += 1;
         Pass_Value.push("H = "+H.toFixed(3));
@@ -300,12 +283,6 @@ function calculateFreeplay() {
       }
       resultsHTML += "</div>";
       resultsHTML += "<div class='results-column'>";
-      resultsHTML += "<p class='recheck'>Total Rechecks: " + Zero_Counter + "</p>";
-      for (let i = 0; i < Zero.length; i++) {
-        resultsHTML += "<p class='recheck'>" + Zero[i] + "</p>";
-      }
-      resultsHTML += "</div>";
-      resultsHTML += "<div class='results-column'>";
       resultsHTML += "<p class='fail'>Total Failed: " + Fail_Value.length + "</p>";
       for (let i = 0; i < Fail_Value.length; i++) {
         resultsHTML += "<p class='fail'>" + Fail_Value[i] + "</p>";
@@ -320,12 +297,7 @@ function calculateFreeplay() {
       for (let i = 0; i < Pass_Value.length; i++) {
         resultsHTML2 += "<p class='pass'>" + Pass_Value[i] + "</p>";
       }
-      resultsHTML2 += "</div>";
-      resultsHTML2 += "<div class='results-column'>";
-      resultsHTML2 += "<p class='recheck'>Total Rechecks: " + Zero_Counter + "</p>";
-      for (let i = 0; i < Zero.length; i++) {
-        resultsHTML2 += "<p class='recheck'>" + Zero[i] + "</p>";
-      }
+      
       resultsHTML2 += "</div>";
       resultsHTML2 += "<div class='results-column'>";
       resultsHTML2 += "<p class='fail'>Total Failed: " + Fail_Value.length + "</p>";
