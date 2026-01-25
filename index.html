@@ -5,7 +5,7 @@
   <script src="737.js"></script>
   <script src="757.js"></script>
   <script src="toggle.js"></script>
-  <script src="torque.js"></script>
+  <script src="torque.js?v=4"></script>
 </head>
 <header>
   <h1>Aviation Maintenance Toolbox</h1>
@@ -71,7 +71,18 @@
       <div id="torqueResults"></div>
     </details><br>
       <details>
-        <summary><h3 class="underline">Torque Wrench Extension Calculator (in work)</h3></summary>
+        <summary><h3 class="underline">Torque Wrench Extension Calculator</h3></summary>
+    <p>Desired Torque Value: <input type="number" id="desire" min="0" step="0.001" placeholder="Enter Desired Torque"/></p>
+    <p>Torque Wrench Length (in inches): <input type="number" id="length" min="0" step="0.001" placeholder="Enter TW Length"/></p>
+    <p>Extension Length (in inches): <input type="number" id="extension" min="0" step="0.001" placeholder="Enter Extenison Length"/></p>
+         <p>Torque Wrench Setting: <select name="Unit" id="Unit"> </p>
+        <option value="null">---Select Unit---</option>
+        <option value="foot pounds">Foot Pounds</option>
+        <option value="inch pounds">Inch Pounds</option>
+        <option value="newton meters">Newton Meters</option>
+      </select><br>
+    <button onclick="calculateExtension()">Calculate</button>
+    <div id="extResults"></div>
       </details>
   </details>
   <footer>
