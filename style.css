@@ -52,7 +52,7 @@ h2 {
 
 h3 {
   color: #CBD5E1;
-  margin-top: 25px;
+  margin-bottom: 10px;
 }
 
 header {
@@ -110,9 +110,13 @@ select {
   margin-top: -10px;
 }
 
+summary h2 {
+  padding-right: 5px;
+}
+
 summary h2, summary h3 {
   display: inline;
-  margin: 0 0 25px 0;
+  margin: 5px 5px 10px 5px;
 }
 
 .torque {
