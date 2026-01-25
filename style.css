@@ -1,14 +1,40 @@
+.boeing {
+  border-bottom: solid 3px #1a409f;
+  border-right: solid 3px #1a409f;
+  color: white;
+  display: inline;
+  transform: skew(-20deg);
+}
+
 body {
   background-color: #0F172A;
+  color: white;
 }
+
 button {
   border-radius: 5px;
 }
+
+button, select {
+  color: purple;
+  font-style: italic;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.container {
+  display: flex;
+}
+
 .fail {
   color: red;
   font-weight: bold;
   margin-bottom: -10px;
 }
+
 footer {
   border-top: 1px solid #b9b9c3;
   color: #e0e0e0;
@@ -18,73 +44,85 @@ footer {
   padding: 10px;
   text-align: center;
 }
-header {
-  color: #e0e0e0;
-  text-align: center;
-  font-style: italic;
-}
+
 h2 {
   color: #E5E7EB;
   margin-bottom: -25px;
 }
+
 h3 {
   color: #CBD5E1;
   margin-top: 25px;
 }
-h2 , h3 {
+
+header {
   color: #e0e0e0;
   font-style: italic;
+  text-align: center;
 }
+
 p {
   color: white;
   font-style: italic;
   font-weight: bold;
 }
+
 .pass {
   color: green;
   font-weight: bold;
   margin-bottom: -10px;
 }
-.recheck{
+
+.recheck {
   color: yellow;
   font-weight: bold;
   margin-bottom: -10px;
 }
-button, select {
-  color: purple;
+
+.ref, .note {
+  border: solid 3px red;
+  color: red;
+  display: inline-block;
   font-style: italic;
+  font-weight: bold;
+  padding: 7px;
 }
 
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-select {
-  border: 25px;
-  margin-bottom: 25px;
-  margin-top: -10px;
-}
-.underline {
-  text-decoration: underline;
-}
 .results, #results {
   color: gold;
   margin-bottom: -10px;
+  padding-bottom: 10px;
 }
-.ref {
-  color: red;
-  font-style: italic;
-  font-weight: bold;
+
+.results-column {
+  min-width: 120px;
 }
-summary h2, summary h3 {
-  display: inline;
-  margin: 0 0 25px 0;
-}
+
 .results-container {
   display: flex;
   gap: 40px;
   margin-top: 10px;
 }
-.results-column {
-  min-width: 120px;
+
+select {
+  border: 25px;
+  margin-bottom: 25px;
+  margin-top: -10px;
+}
+
+summary h2, summary h3 {
+  display: inline;
+  margin: 0 0 25px 0;
+}
+
+.torque {
+  border-bottom: solid 3px grey;
+  border-right: solid 3px grey;
+  color: teal;
+  display: inline-block;
+  transform: skew(-20deg);
+}
+
+.underline {
+  text-decoration: underline;
 }
