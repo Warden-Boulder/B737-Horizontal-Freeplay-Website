@@ -30,3 +30,16 @@ function convertTorque() {
     document.getElementById('torqueResults').innerHTML = resultsHTML;
   }
 }
+function calculateExtension() {
+  const torque = parseFloat(document.getElementById('desire').value);
+  const length = parseFloat(document.getElementById('length').value);
+  const extension = parseFloat(document.getElementById('extension').value);
+  const unit = document.getElementById('Unit').value
+
+  let resultsHTML2 = "";
+  let effective = extension+length;
+  let setting = Math.ceil(torque*((length/effective)*2)/2);
+
+  resultsHTML2 = "<p>Set your Torque Wrench to "+setting+" "+unit+"<p>";
+  document.getElementById('extResults').innerHTML = resultsHTML2;
+}
