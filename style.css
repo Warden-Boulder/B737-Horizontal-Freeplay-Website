@@ -2,7 +2,7 @@
   border-bottom: solid 3px #1a409f;
   border-right: solid 3px #1a409f;
   color: white;
-  display: inline;
+  display: inline-block;
   transform: skew(-20deg);
 }
 
