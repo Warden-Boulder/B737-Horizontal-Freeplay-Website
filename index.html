@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="style.css?v=4">
-  <script src="737.js?v=4"></script>
-  <script src="757.js?v=4"></script>
-  <script src="toggle.js?v=3"></script>
-  <script src="torque.js?v=4"></script>
+  <link rel="stylesheet" href="style.css?v=7">
+  <script src="737.js"></script>
+  <script src="757.js"></script>
+  <script src="toggle.js"></script>
+  <script src="torque.js"></script>
 </head>
 <header>
   <h1>Aviation Maintenance Toolbox</h1>
@@ -13,11 +13,13 @@
 </header><br>
 <body>
  <details>
-   <summary><h2 class="underline">Boeing Tools</h2></summary>
+     <summary><h2 class="boeing">Boeing Tools</h2></summary>
    <details> 
      <summary><h3 class="underline">B737 Horizontal Freeplay Check</h3></summary>
-   <p class="ref" style="color: red;">Ref: Any applicable AD/SB and/or AMM</p>
+   <div class="container">
+     <p class="ref" style="color: red;">Ref: Any applicable AD/SB and/or AMM</p>
    <p class="note" style="color: red;" style="font-weight: bold";>Note: Ensure compliance with any applicable reference and compamy SOP. This tool is for assistance only and not a substitute for technial date</p>
+   </div>
    
    <p>Is a NG or Max aircraft being worked?</p>
   <select name="Aircraft Type" id="aircraftType" onchange="toggle737()">
@@ -55,7 +57,7 @@
      </details>
  </details><br>
   <details>
-    <summary><h2 class="underline">Torque Tools</h2></summary>
+    <summary><h2 class="torque">Torque Tools</h2></summary>
     <details>
       <summary><h3 class="underline">Torque Unit Converter</h3></summary>
       <input type="number" id="torqueInput" min="0" step="0.001" placeholder="Enter Torque Value Here" /> 
