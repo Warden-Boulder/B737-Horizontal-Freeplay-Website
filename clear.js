@@ -1,0 +1,21 @@
+function Clear() {
+  document.getElementById("results").innerHTML = "";
+  document.getElementById("results757").innerHTML = "";
+  document.getElementById("torqueResults").innerHTML = "";
+  document.getElementById("extResults").innerHTML = "";
+  document.getElementById("tail757").innerHTML = "";
+  document.getElementById("tail757").value = "";
+  document.getElementById("msn").innerHTML = "";
+  document.getElementById("msn").value = "";
+  document.getElementById("desire").value = "";
+  document.getElementById("length").value = "";
+  document.getElementById("extension").value = "";
+  document.getElementById("D1").value = "";
+  document.getElementById("D2").value = "";
+  document.getElementById("D3").value = "";
+  document.getElementById("1l").value = "";
+  document.getElementById("1r").value = "";
+  document.getElementById("2l").value = "";
+  document.getElementById("2r").value = "";
+  document.getElementById("Weight").value = "";
+}
