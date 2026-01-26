@@ -2,6 +2,7 @@ function Clear() {
   document.getElementById("results").innerHTML = "";
   document.getElementById("results757").innerHTML = "";
   document.getElementById("torqueResults").innerHTML = "";
+  document.getElementById("torqueInput").value = "";
   document.getElementById("extResults").innerHTML = "";
   document.getElementById("tail757").innerHTML = "";
   document.getElementById("tail757").value = "";
