@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .airbus {
   border-bottom: solid 3px yellow;
   border-right: solid 3px yellow;
@@ -85,6 +89,11 @@ footer {
   margin-top: 20px;
   padding: 10px;
   text-align: center;
+}
+
+footer a {
+  color: #e0e0e0;
+  text-decoration: none;
 }
 
 h2 {
