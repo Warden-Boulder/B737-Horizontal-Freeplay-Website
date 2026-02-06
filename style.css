@@ -1,15 +1,16 @@
 .airbus {
   border-bottom: solid 3px yellow;
   border-right: solid 3px yellow;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
   color: white;
   display: inline-block;
   transform: skew(-20deg);
-  width: fit-content;
 }
 
 .boeing {
   border-bottom: solid 3px #1a409f;
   border-right: solid 3px #1a409f;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
   color: white;
   display: inline-block;
   transform: skew(-20deg);
@@ -18,9 +19,33 @@
 .torque {
   border-bottom: solid 3px grey;
   border-right: solid 3px grey;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
   color: white;
   display: inline-block;
   transform: skew(-20deg);
+}
+
+summary {
+  display: flex;
+  align-items: center;
+}
+
+summary h2, summary h3 {
+  display: inline;
+  margin: 0;
+}
+
+details summary::-webkit-details-marker {
+  margin-right: 10px;
+}
+
+details summary::marker {
+  content: "▶ ";
+  color: white;
+}
+
+details[open] summary::marker {
+  content: "▼ ";
 }
 
 body {
