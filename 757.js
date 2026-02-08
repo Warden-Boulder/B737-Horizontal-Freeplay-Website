@@ -10,43 +10,32 @@ function calculateRudder() {
   let fail = [];
   let limits = [0.040, 0.40];
 
-  let left_diff = (oneL-twoL).toFixed(3);
-  let right_diff = (oneR-twoR).toFixed(3);
   let first_total = oneL+oneR;
   let second_total = twoL+twoR;
+  let diff = (first_total-second_total).toFixed(3);
 
-  if (left_diff < 0) {
-    left_diff = left_diff*(-1);
+  if (diff < 0) {
+    diff = diff*(-1);
   } else {
-    left_diff = left_diff;
+    diff = diff;
   }
-
-  if (right_diff < 0) {
-    right_diff = right_diff*(-1);
-  } else {
-    right_diff = right_diff;
-  }
-
-  if (left_diff < limits[0]) {
-    pass.push("Left differential is "+left_diff);
-  } else {
-    fail.push("Left differential is "+left_diff);
-  }
-  if (right_diff < limits[0]) {
-    pass.push("Right differential is "+right_diff);
-  } else {
-    fail.push("Right differential is "+right_diff);
-  }
+  
   if (first_total < limits[1]) {
-    pass.push("1st total = "+first_total);
+    pass.push("1st total = "+first_total+" <br>(Limit is 0.4)");
   } else {
-    fail.push("1st total = "+first_total);
+    fail.push("1st total = "+first_total+" <br>(Limit is 0.4)");
   }
 
   if (second_total < limits[1]) {
-    pass.push("2nd total = "+second_total);
+    pass.push("2nd total = "+second_total+" <br>(Limit is 0.4)");
   } else {
-    fail.push("2nd total = "+second_total);
+    fail.push("2nd total = "+second_total+" <br>(Limit is 0.4)");
+  }
+
+   if (diff < limits[0]) {
+    pass.push("Freeplay difference is "+diff+" <br>(Limit is 0.04)");
+  } else {
+    fail.push("Freeplay difference is "+diff+" <br>(Limit is 0.04)");
   }
   
   if (tail !== "") {
@@ -56,7 +45,7 @@ function calculateRudder() {
     resultsHTML += "<div class='results-column'>";
     resultsHTML += "<p class='pass'>Total Passed: " + pass.length + "</p>";
     for (let i = 0; i < pass.length; i++) {
-      resultsHTML += "<p class='pass'>" + pass[i] + "</p>";
+      resultsHTML += "<p class='pass'>" + pass[i] +"</p>";
     }
     resultsHTML += "</div>";
     resultsHTML += "<div class='results-column'>";
