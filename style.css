@@ -1,4 +1,5 @@
 a {
+  color: white;
   text-decoration: none;
 }
 
@@ -8,6 +9,7 @@ a {
   box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.3);
   color: white;
   display: inline-block;
+  padding: auto;
   transform: skew(-20deg);
 }
 
@@ -99,6 +101,7 @@ footer a {
 h2 {
   color: #E5E7EB;
   margin-bottom: -25px;
+  margin-right: 5px;
 }
 
 h3 {
