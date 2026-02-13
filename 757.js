@@ -10,14 +10,37 @@ function calculateRudder() {
   let fail = [];
   let limits = [0.040, 0.40];
 
-  let first_total = oneL+oneR;
-  let second_total = twoL+twoR;
+  let first_total = (oneL+oneR).toFixed(3);
+  let second_total = (twoL+twoR).toFixed(3);
   let diff = (first_total-second_total).toFixed(3);
 
   if (diff < 0) {
     diff = diff*(-1);
   } else {
     diff = diff;
+  }
+
+  if (first_total.endsWith(`000`)) {
+    first_total = (oneL+oneR).toFixed(0);
+  } else if (first_total.endsWith(`00`)) {
+     first_total = (oneL+oneR).toFixed(1);
+  } else if (first_total.endsWith(`0`)) {
+     first_total = (oneL+oneR).toFixed(2);
+  }
+
+   if (second_total.endsWith(`000`)) {
+    second_total = (twoL+twoR).toFixed(0);
+  } else if (second_total.endsWith(`00`)) {
+     second_total = (twoL+twoR).toFixed(1);
+  } else if (second_total.endsWith(`0`)) {
+     second_total = (twoL+twoR).toFixed(0);
+  }
+   if (diff.endsWith(`000`)) {
+    diff = (first_total-second_total).toFixed(0);
+  } else if (diff.endsWith(`00`)) {
+     diff = (first_total-second_total).toFixed(1);
+  } else if (diff.endsWith(`0`)) {
+     diff = (first_total-second_total).toFixed(2);
   }
   
   if (first_total < limits[1]) {
@@ -37,6 +60,7 @@ function calculateRudder() {
   } else {
     fail.push("Freeplay difference is "+diff+" <br>(Limit is 0.04)");
   }
+
   
   if (tail !== "") {
     let name = tail;
