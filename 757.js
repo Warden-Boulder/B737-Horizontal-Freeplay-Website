@@ -33,7 +33,7 @@ function calculateRudder() {
   } else if (second_total.endsWith(`00`)) {
      second_total = (twoL+twoR).toFixed(1);
   } else if (second_total.endsWith(`0`)) {
-     second_total = (twoL+twoR).toFixed(0);
+     second_total = (twoL+twoR).toFixed(2);
   }
    if (diff.endsWith(`000`)) {
     diff = (first_total-second_total).toFixed(0);
