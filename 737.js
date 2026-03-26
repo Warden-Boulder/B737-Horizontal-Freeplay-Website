@@ -14,13 +14,13 @@ function calculateFreeplay() {
     let H = (1.25 * D3) + ((D1 + D2) / 2);
 
     if (D1 > limits[0]) {
-      let d1 = D1.toFixed(4); 
+      let d1 = D1.toFixed(3); 
       if (d1.endsWith('00')) {
         Fail.push("D1 = "+ D1.toFixed(2));
       } else if (d1.endsWith('0')) {
         Fail.push("D1 = "+ D1.toFixed(3));
       } else {
-        Fail.push("D1 = "+ D1.toFixed(4));
+        Fail.push("D1 = "+ D1.toFixed(3));
       }
     }
 
