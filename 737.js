@@ -1,17 +1,12 @@
-function calculateFreeplay() {
-  const aircraftType = document.getElementById("aircraftType").value;
-  
-  if (aircraftType === "NG") {
-    document.getElementById('results').innerHTML = '';
-    const limits = [0.066, 0.066, 0.056, 0.078];
-    let Pass = [];
-    let Fail = [];
-    
-    let msn = document.getElementById("msn").value;
-    let D1 = parseFloat(document.getElementById('D1').value);
-    let D2 = parseFloat(document.getElementById('D2').value);
-    let D3 = parseFloat(document.getElementById('D3').value);
+function NG() {
+  let msn = document.getElementById("NGmsn").value;
+    let D1 = parseFloat(document.getElementById('ND1').value);
+    let D2 = parseFloat(document.getElementById('ND2').value);
+    let D3 = parseFloat(document.getElementById('ND3').value);
     let H = (1.25 * D3) + ((D1 + D2) / 2);
+    const limits = [0.066, 0.066, 0.056, 0.078];
+    let Fail = [];
+    let Pass= [];
 
     if (D1 > limits[0]) {
       let d1 = D1.toFixed(3); 
@@ -103,7 +98,7 @@ function calculateFreeplay() {
     
     if (msn !== "") {
       let name = msn;
-      let resultsHTML = "<h3 class='results underline'>Freeplay Results for " + name + "</h3>";
+      let resultsHTML = "<h3 class='results underline' style='font-style: italic;'>Freeplay Results for " + name + "</h3>";
       resultsHTML += "<div class='results-container'>";
       resultsHTML += "<div class='results-column'>";
       resultsHTML += "<p class='pass'>Total Passed: " + Pass.length + "</p>";
@@ -119,7 +114,7 @@ function calculateFreeplay() {
       resultsHTML += "</div></div>";
       document.getElementById('results').innerHTML = resultsHTML;
     } else {
-      let resultsHTML2 = "<h3 class='results underline'>Freeplay Results</h3>";
+      let resultsHTML2 = "<h3 class='results underline' style='font-style: italic;'>Freeplay Results</h3>";
       resultsHTML2 += "<div class='results-container'>";
       resultsHTML2 += "<div class='results-column'>";
       resultsHTML2 += "<p class='pass'>Total Passed: " + Pass.length + "</p>";
@@ -135,19 +130,20 @@ function calculateFreeplay() {
       resultsHTML2 += "</div></div>";
       document.getElementById('results').innerHTML = resultsHTML2;
     }
+}
 
-  } else if (aircraftType === "Max") {
-    document.getElementById('results').innerHTML = '';
+function Max() {
+  document.getElementById('results2').innerHTML = '';
     const limits = [0.060,0.060,0.050,0.051];
     let Passed = 0;
     let Pass_Value = [];
     let Failed = 0;
     let Fail_Value = [];
 
-    let msn = document.getElementById('msn').value;
-    let D1 = parseFloat(document.getElementById('D1').value);
-    let D2 = parseFloat(document.getElementById('D2').value);
-    let D3 = parseFloat(document.getElementById('D3').value);
+    let msn = document.getElementById('Maxmsn').value;
+    let D1 = parseFloat(document.getElementById('MD1').value);
+    let D2 = parseFloat(document.getElementById('MD2').value);
+    let D3 = parseFloat(document.getElementById('MD3').value);
     let weight = parseFloat(document.getElementById('Weight').value);
 
     let X = D1-(weight*0.0000155);
@@ -274,7 +270,7 @@ function calculateFreeplay() {
 
     if (msn !== "") {
       let name = msn;
-      let resultsHTML = "<h3 class='results underline'>Freeplay Results for " + name + "</h3>";
+      let resultsHTML = "<h3 class='results underline' style='font-style: italic;'>Freeplay Results for " + name + "</h3>";
       resultsHTML += "<div class='results-container'>";
       resultsHTML += "<div class='results-column'>";
       resultsHTML += "<p class='pass'>Total Passed: " + Pass_Value.length + "</p>";
@@ -290,7 +286,7 @@ function calculateFreeplay() {
       resultsHTML += "</div></div>";
       document.getElementById('results').innerHTML = resultsHTML;
     } else {
-      let resultsHTML2 = "<h3 class='results underline'>Freeplay Results</h3>";
+      let resultsHTML2 = "<h3 class='results underline' style='font-style: italic;'>Freeplay Results</h3>";
       resultsHTML2 += "<div class='results-container'>";
       resultsHTML2 += "<div class='results-column'>";
       resultsHTML2 += "<p class='pass'>Total Passed: " + Pass_Value.length + "</p>";
@@ -305,7 +301,6 @@ function calculateFreeplay() {
         resultsHTML2 += "<p class='fail'>" + Fail_Value[i] + "</p>";
       }
       resultsHTML2 += "</div></div>";
-      document.getElementById('results').innerHTML = resultsHTML2;
+      document.getElementById('results2').innerHTML = resultsHTML2;
     }
   }
-}
