@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="style.css?v=26">
+  <link rel="stylesheet" href="style.css?v=32">
   <script src="737.js"></script>
   <script src="757.js?v=4"></script>
-  <script src="airbus.ja"></script>
+  <script src="airbus.js"></script>
   <script src="clear.js?v=3"></script>
   <script src="toggle.js"></script>
   <script src="torque.js?v=5"></script>
   <script src="ts.js"></script>
 </head>
-<header>
+<body>
+  <header>
   <h1>Aviation Maintenance Toolbox</h1>
   <p>A collection of custom tools for aircraft maintenance. Other tools will be added as they are developed.</p>
-  <!-- <a href="ts.html?=v2">Troublingshooting Guide</a> -->
 </header><br>
-<body>
   <details>
     <summary><h2 class="airbus">Airbus Tools</h2></summary>
     <p><em><strong>Currently looking for tools to build and will update accordingly</strong></em></p>
@@ -23,26 +22,42 @@
   <details>
     <summary><h2 class="boeing">Boeing Tools</h2></summary><br>
    <details> 
-     <summary><h3 class="underline">B737 Horizontal Freeplay Check</h3></summary>
-     
-     <p class="ref"><strong class="underline">Ref:</strong> Any applicable AD/SB and/or AMM <br>
-       <strong class="underline">Note:</strong> Ensure compliance with any applicable reference and company SOP. This tool is for assistance only and not a substitute for technical data.<br></p>
-     
-     <p>Is a NG or Max aircraft being worked?</p>
-  <select name="Aircraft Type" id="aircraftType" onchange="toggle737()">
-    <option value="null">---Select--</option>
-    <option value="NG">B737NG</option>
-    <option value="Max">B737Max</option>
-  </select><br>
-  <p id="tail">Tail # / MSN (optional): <input type="text"  id="msn" placeholder="Tail # or MSN"/></p>
-  <p id="d1">D1 = <input type="number" id="D1" min="0" step="0.001" placeholder="Enter D1 value/reading" /></p>
-  <p id="d2">D2 = <input type="number" id="D2"  min="0" step="0.001" placeholder="Enter D2 value/reading"></p>
-  <p id="d3">D3 = <input type="number" id="D3" min="0" step="0.001"  min="0" step="1"  placeholder="Enter D3 value/reading" /></p>
-  <p id="weight">Weight (in lbs) = <input type="number" id="Weight" placeholder="Enter weight used" /></p><br>
-  <button onclick="calculateFreeplay()"> Calculate Freeplay</button>
-  <button onclick="Clear()">Clear</button>
-  <div id="results"></div>
-   </details><br>
+  <summary><h3 class="underline">B737 Horizontal Freeplay Check</h3></summary>
+
+  <p class="ref">
+    <strong class="underline">Ref:</strong> Any applicable AD/SB and/or AMM <br>
+    <strong class="underline">Note:</strong> Ensure compliance with any applicable reference and company SOP. This tool is for assistance only and not a substitute for technical data.<br>
+  </p>
+  <div class="card-wrapper" style="display: flex; gap: 20px; flex-wrap: wrap;">
+    <div class="card-container">
+      <div class="ng-card">
+        <h4 style="font-style: italic; font-weight: bold;">B737NG</h4>
+        <p>Tail # / MSN (optional): <input type="text" id="NGmsn" placeholder="Tail # or MSN"/></p>
+        <p>D1 = <input type="number" id="ND1" min="0" step="0.001" placeholder="Enter D1 value/reading" /></p>
+        <p>D2 = <input type="number" id="ND2" min="0" step="0.001" placeholder="Enter D2 value/reading" /></p>
+        <p>D3 = <input type="number" id="ND3" min="0" step="0.001" placeholder="Enter D3 value/reading" /></p>
+        <br>
+        <button onclick="NG()">Calculate</button>
+        <button onclick="Clear()">Clear</button>
+        <div id="results"></div>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="max-card">
+        <h4 style="font-style: italic; font-weight: bold;">B737 Max</h4>
+        <p>Tail # / MSN (optional): <input type="text" id="Maxmsn" placeholder="Tail # or MSN"/></p>
+        <p>D1 = <input type="number" id="MD1" min="0" step="0.001" placeholder="Enter D1 value/reading" /></p>
+        <p>D2 = <input type="number" id="MD2" min="0" step="0.001" placeholder="Enter D2 value/reading" /></p>
+        <p>D3 = <input type="number" id="MD3" min="0" step="0.001" placeholder="Enter D3 value/reading" /></p>
+        <p>Weight (in lbs) = <input type="number" id="Weight" placeholder="Enter weight used" /></p>
+        <br>
+        <button onclick="Max()">Calculate</button>
+        <button onclick="Clear()">Clear</button>
+        <div id="results2"></div>
+      </div>
+    </div>
+  </div> 
+</details><br>
      <details>
        <summary><h3 class="underline">B757 Rudder Freeplay Check</h3></summary>
     <p class="ref">
