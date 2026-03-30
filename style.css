@@ -27,7 +27,7 @@ a {
   margin: 10px;          
 }
 
-.ng-card, .max-card, .atari-card, .torque-card {
+.ng-card, .max-card, .atari-card, .torque-card, .extend-card {
   width: 300px;          
   min-height: 250px;   
   padding: 15px;
