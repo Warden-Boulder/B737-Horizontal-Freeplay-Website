@@ -2,6 +2,12 @@ a {
   text-decoration: none;
 }
 
+header a {
+  color: #e0e0e0;
+  size: 16px;
+  text-decoration: none;
+}
+
 .airbus {
   border-bottom: solid 3px yellow;
   border-right: solid 3px yellow;
@@ -22,7 +28,7 @@ a {
 }
 
 .card-container {
-  display: inline-block; 
+  display: flex; 
   vertical-align: top;   
   margin: 10px;          
 }
@@ -193,4 +199,16 @@ summary h2 {
 
 .underline {
   text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
 }
